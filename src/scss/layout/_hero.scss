@@ -1,0 +1,46 @@
+.hero{
+    background-image: url(../../build/img/hero-mobile.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    min-height: 30rem;
+    padding: 2rem;
+    display: grid;
+    place-content: center;
+
+    .hero__text{
+        font-size: 1.8rem;
+        display: none;
+    }
+} 
+
+
+@include tablet {
+    .hero{
+        background-image: url(../../build/img/hero.webp);
+        height: 50rem;
+        background-position: bottom center;
+        gap: 2rem   ;
+
+        .hero__text{
+            display: block;
+            text-align: center;
+            font-size: 2rem;
+        }
+    }
+
+}
+
+@include desktop{
+    .hero{
+        height: 80rem;
+        .hero__contenido{
+            width: 90rem;
+           }
+    }
+    
+    .hero__text{
+        font-size: 3rem;
+    }
+}

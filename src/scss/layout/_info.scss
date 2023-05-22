@@ -1,0 +1,41 @@
+#informacion{
+    background-color: $azulOscuro;
+    padding: 10rem 3rem;
+    .informacion__contenido{
+        display: grid;
+        text-align: center;
+        gap: 4rem;
+        padding: 1rem;
+    
+    }
+    .informacion__title{
+        padding: 3rem 2rem;
+    }
+    
+}
+.caja{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+}
+.caja__icono{
+    text-align: center;
+    width: 12rem;
+    height: 12rem;
+}
+
+
+@include tablet{
+    .informacion__contenido{
+        padding: 2rem;
+        @include grid(2, 1rem);
+        
+    }
+}
+
+@include desktop{
+    .informacion__contenido{
+        @include grid(4, 1rem)
+    }
+}

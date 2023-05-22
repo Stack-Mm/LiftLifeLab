@@ -1,0 +1,54 @@
+@keyframes wipe-in-down {
+    from {
+      clip-path: inset(0 0 100% 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+  
+  [transition-style="in:wipe:down"] {
+    animation: 2s cubic-bezier(.25, 1, .30, 1) wipe-in-down both;
+  }
+  @include tablet{
+    [transition-style="in:wipe:down"] {
+      animation: none;
+    }
+  }
+
+
+.display-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.centrado{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+body{
+  color: $blanco;
+}
+.w-100{
+    width: 100%;
+}
+.txt-resaltado{
+  color: $grisClaro
+}
+
+.txt-resaltado-oscuro{
+  color: $negro;
+}
+
+.titulo{
+  font-size: 2.8rem;
+}
+
+@include tablet{
+  .titulo{font-size: 3.8rem;
+}}
+@include desktop{
+  .titulo{font-size: 5.8rem;
+}}

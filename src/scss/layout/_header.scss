@@ -1,0 +1,135 @@
+.no-webp .inicio{
+  background-image: url(../../../build/img/header.jpg);
+}
+
+.webp .inicio{
+  background-image: url(../../../build/img/header.webp);
+}
+
+
+
+// Header
+
+.header{
+  background-color: $azulOscuro;
+
+  .navegacion{
+    padding: 1rem;
+    max-height: 12rem;
+  }
+
+
+}
+.logo{
+  aspect-ratio: 1/1;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.contenido{
+    display: block;
+    text-align: center;
+    background-color: $azulOscuro;
+    padding: 2rem;
+    .contenido__item{
+      display: block;
+      margin-bottom: 1rem;
+      padding: .5rem; 
+    }
+    
+  }
+
+
+
+// Boton hamburguesa
+
+.label-check {
+  display: none;
+}
+
+.hamburger-label {
+  width: 70px;
+  height: 58px;
+  display: block;
+  cursor: pointer;
+}
+
+.hamburger-label div {
+  width: 6rem;
+  height: .6rem;
+  background-color: #fff;
+  position: absolute;
+}
+
+.line1 {
+  transition: all .3s;
+}
+
+.line2 {
+  margin: 18px 0 0 0;
+  transition: 0.3s;
+}
+
+.line3 {
+  margin: 36px 0 0 0;
+  transition: 0.3s;
+}
+
+#label-check:checked + .hamburger-label .line1 {
+  transform: rotate(35deg) scaleX(.55) translate(39px, -4.5px);
+  border-radius: 50px 50px 50px 0;
+}
+
+#label-check:checked + .hamburger-label .line3 {
+  transform: rotate(-35deg) scaleX(.55) translate(39px, 4.5px);
+  border-radius: 0 50px 50px 50px;
+}
+
+#label-check:checked + .hamburger-label .line2 {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  width: 45px;
+}
+.oculto {
+  display: none;
+}
+.contenido-desk{
+  display: none;
+}
+
+@include tablet {
+  .container, #label-check{
+    display: none;
+  }
+  #contenido{
+    display: none;
+  }
+  .header{
+    height: 13rem;
+    .navegacion{
+      height: 100%;
+      .logo{
+        width: 10rem;
+        height: 10rem;
+      }
+    }
+  }
+  .menu-desktop{
+    display: flex;
+  }
+
+  .contenido-desk{
+    display: flex;
+    column-gap: 2rem;
+    color: $blanco;
+    font-size: 1.8rem;
+  }
+  .contenido__item{
+    &:hover{
+    color: $rosado;
+    cursor: pointer;
+    }
+  }
+}
